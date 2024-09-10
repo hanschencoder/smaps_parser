@@ -114,6 +114,8 @@ def parse_head(name):
         else:
             sub_heap = Heap.HEAP_ART_APP
         is_swappable = True
+    elif name.startswith("/kgsl-3d0"):
+        which_heap = Heap.HEAP_GL_DEV
     elif name.startswith("/dev/"):
         which_heap = Heap.HEAP_UNKNOWN_DEV
         if name.startswith("/dev/kgsl-3d0"):
